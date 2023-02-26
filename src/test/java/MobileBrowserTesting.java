@@ -13,15 +13,15 @@ import java.util.Set;
 public class MobileBrowserTesting {
 
     @Test
-
     public void Mobil() throws MalformedURLException, InterruptedException {
+
         DesiredCapabilities caps = new DesiredCapabilities();
         caps.setCapability("platformName", "Android");
-        caps.setCapability("platformVersion", "11.0");
-        caps.setCapability("deviceName", "PIXEL");
+        caps.setCapability("platformVersion", "10.0");
+        caps.setCapability("deviceName", "Pixel2");
         caps.setCapability("browserName", "chrome");
         caps.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, "60000");
-        caps.setCapability("chromedriverExecutable", "C:\\Users\\maruf\\IdeaProjects\\mobilBrowserTesting\\src\\driver\\chromedriver.exe");
+        caps.setCapability("chromedriverExecutable", "C:\\Users\\Eda\\mobilBrowserTesting\\src\\driver\\chromedriver.exe");
 
         AndroidDriver<AndroidElement> driver = new AndroidDriver<AndroidElement>(new URL("http://localhost:4723/wd/hub"), caps);
 
